@@ -1,0 +1,28 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+create_visitors:
+  path: /visitors
+  methods: [POST]
+  controller: App\Controller\VisitorController::createVisitors
+
+remove_visitors:
+  path: /visitors
+  methods: [DELETE]
+  controller: App\Controller\VisitorController::removeVisitors
+
+get_visitors:
+  path: /visitors
+  methods: [GET]
+  controller: App\Controller\VisitorController::getVisitors
+
+set_dance_rules:
+  path: /rules
+  methods: [POST]
+  controller: App\Controller\DanceRuleController::setDanceRules
+
+remove_dance_rules:
+  path: /rules
+  methods: [DELETE]
+  controller: App\Controller\DanceRuleController::removeDanceRules
