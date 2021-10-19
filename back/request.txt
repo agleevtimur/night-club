@@ -1,0 +1,48 @@
+curl --location --request POST 'http://127.0.0.1:8000/rules?token=abc' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "genre": "hiphop",
+        "bodyRule": "swinging back and forth",
+        "handsRule": "bent at the elbows",
+        "legsRule": "in a half-squat",
+        "headRule": "back and forth"
+    },
+    {
+        "genre": "electrodance",
+        "bodyRule": "swinging back and forth",
+        "headRule": "almost no movement",
+        "handsRule": "circular motion of rotation",
+        "legsRule": "movement in rhythm"
+    },
+    {
+        "genre": "electrohouse",
+        "bodyRule": "swinging back and forth",
+        "headRule": "almost no movement",
+        "handsRule": "circular motion of rotation",
+        "legsRule": "movement in rhythm",
+        "relations": ["electrodance", "house"]
+    },
+    {
+        "genre": "house",
+        "bodyRule": "swinging back and forth",
+        "headRule": "almost no movement",
+        "handsRule": "circular motion of rotation",
+        "legsRule": "movement in rhythm"
+    },
+    {
+        "genre": "pop",
+        "bodyRule": "smooth movements",
+        "headRule": "smooth movements",
+        "handsRule": "smooth movements",
+        "legsRule": "smooth movements"
+    },
+    {
+        "genre": "rnb",
+        "bodyRule": "smooth movements",
+        "headRule": "smooth movements",
+        "handsRule": "smooth movements",
+        "legsRule": "smooth movements",
+        "relations": ["hiphop"]
+    }
+]'
